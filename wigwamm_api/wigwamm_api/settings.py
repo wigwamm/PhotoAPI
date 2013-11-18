@@ -88,7 +88,8 @@ STATIC_URL = '/static/'
 
 
 
-# Celery
+# CELERY
+
 BROKER_HOST = 'localhost'
 BROKER_PORT = 5672
 # BROKER_USER = ''
@@ -99,5 +100,14 @@ CELERY_BACKEND = 'amqp'
 
 import djcelery
 djcelery.setup_loader() 
+
+
+# DROPBOX
+
+DROPBOX_APP_KEY = '5oqgo69g2ayjvzt'
+DROPBOX_SECRET  = '3qtihkc4np23vn8'
+DROPBOX_TOKEN   = 'b2Twyr030YEAAAAAAAAAAS1JR_CuCQ0QwleQG3Nxqq2Txvri4vOqKrkzcV8YNf5Q'
+DROPBOX_USER_ID = '235337783'
+DROPBOX_FOLDER  = '/api_test'
 
 

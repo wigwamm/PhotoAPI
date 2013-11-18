@@ -17,5 +17,7 @@ class RepixlImage(models.Model):
     def upload_to_dropbox(self):
         #
         self.status = 'uploading to dropbox'
-        tasks.upload_to_dropbox.delay(self.url, self)
         self.save()
+        
+        tasks.upload_to_dropbox.delay(self.url, self)
+        
