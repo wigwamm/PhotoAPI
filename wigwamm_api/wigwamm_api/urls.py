@@ -8,5 +8,11 @@ urlpatterns = patterns('',
     # url(r'^$', 'wigwamm_api.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+    url(r'^api/v1/repixl/', include('repixl.urls')),
+
     url(r'^admin/', include(admin.site.urls)),
+
+    # hack this for now
+
+
 )

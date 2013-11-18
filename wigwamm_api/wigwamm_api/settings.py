@@ -36,6 +36,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'djcelery',
+
+    'repixl',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -80,3 +84,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+
+
+# Celery
+BROKER_HOST = 'localhost'
+BROKER_PORT = 5672
+# BROKER_USER = ''
+# BROKER_PASSWORD = ''
+# BROKER_VHOST = ''
+CELERY_BACKEND = 'amqp'
+#CELERY_RESULT_DBURI = ''
+
+import djcelery
+djcelery.setup_loader() 
+
+
